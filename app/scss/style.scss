@@ -14,6 +14,7 @@ body{
   font-size: 16px;
   padding: 20px 0 40px;
   color: vars.$color-primary;
+  text-transform: uppercase;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -52,5 +53,90 @@ body{
   &__items {
     display: flex;
     gap: 30px;
+  }
+}
+
+.footer {
+  padding-top: 60px;
+  font-size: 16px;
+  color: vars.$color-text-muted;
+  &__menu-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 45px;
+    border-bottom: 1px solid vars.$color-bg;
+  }
+  &__menu-link {
+    border-bottom: 1px solid vars.$color-text-muted;
+  }
+  &__blocks {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+  }
+  &__block-title {
+    margin-bottom: 20px;
+    opacity: 0.5;
+  }
+  &__block-list {
+    padding-bottom: 45px;
+  }
+  &__block-item {
+    margin-bottom: 5px;
+  }
+  &__social-list {
+    display: flex;
+    gap: 0 10px;
+  }
+  &__form {
+    width: 250px;
+    position: relative;
+  }
+  &__form-input {
+    display: block;
+    width: 100%;
+    padding: 0 30px 6px 0;
+    border: none;
+    border-bottom: 1px solid vars.$color-bg;
+    color: vars.$color-text-muted;
+      &::placeholder {
+        color: vars.$color-text-muted;
+      }
+  }
+  &__form-btn {
+    @extend %button-reset;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__bottom {
+    background-color: vars.$color-bg;
+    font-size: 11px;
+    color: vars.$color-primary;
+    padding: 7px 0 9px;
+  }
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__copy {
+    padding-left: 26px;
+  }
+  &__bottom-list {
+    display: flex;
+    align-items: center;
+    gap: 0 37px;
+    padding-right: 26px;
+  }
+  &__bottom-item + .footer__bottom-item {
+    position: relative;
+      &::before {
+        content: '|';
+        position: absolute;
+        left: -21px;
+        top: 0;
+      }
   }
 }

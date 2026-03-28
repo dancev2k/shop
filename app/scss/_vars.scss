@@ -1,6 +1,7 @@
 $color-accent: #3B2317;
 $color-primary: #513C27;
 $color-text-muted: #94897C;
+$color-bg: #E9E1D7;
 
 %inter-400{
   font-family: 'Inter-Regular', sans-serif;
@@ -25,4 +26,10 @@ $color-text-muted: #94897C;
 %opensans-700{
   font-family: 'OpenSans-Bold', sans-serif;
   font-weight: 700;
+}
+%button-reset{
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
