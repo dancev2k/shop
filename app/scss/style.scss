@@ -178,3 +178,58 @@ body{
     text-transform: uppercase;
   }
 }
+
+.new-collection {
+  background-image: url(../images/new-collection-decor.svg);
+  background-repeat: no-repeat;
+  padding: 150px 0 150px;
+  background-position: 4% -39%;
+  &__inner {
+    display: flex;
+    gap: 0 40px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    margin: 75px 0 50px;
+  }
+  &__text {
+    color: vars.$color-text-muted;
+    max-width: 400px;
+  }
+  &__text+.new-collection__text {
+    margin-top: 25px;
+  }
+  &__link {
+    display: inline-block;
+    margin-top: auto;
+    color: vars.$color-text-muted;
+    font-size: 16px;
+    padding: 10px 65px;
+    border: 1px solid vars.$color-text-muted;
+    align-self: start;
+  }
+  &__img {
+    margin-top: 75px;
+  }
+  &__box {
+    display: flex;  
+    position: relative;
+  }
+  &__box-img {
+    position: absolute;
+    top: 0;
+    left: -115px;
+    max-width: fit-content;
+  }
+  &__caption {
+    color: vars.$color-text-muted;
+    max-width: 290px;
+    margin: auto 0 40px;
+  }
+}
+
