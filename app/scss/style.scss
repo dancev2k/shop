@@ -284,6 +284,7 @@ body{
     margin-top: 20px;
     padding: 12px 0;
     cursor: pointer;
+    z-index: 10;
   }
   &__form-caption {
     font-size: 11px;
@@ -291,10 +292,18 @@ body{
 }
 .designer {
   padding: 150px 0 210px;
+  position: relative;
   &__inner {
     display: flex;
     gap: 180px;
     padding: 0 40px;
+  }
+  &__decor {
+    position: absolute;
+    top: -220px;
+    left: 52%;
+    transform: translateX(-50%);
+    z-index: 5;
   }
   &__content {
     max-width: 404px;
@@ -315,7 +324,6 @@ body{
     flex-direction: column;
     gap: 40px;
   }
-  &__box-img {}
   &__box-caption {
     @extend %lora-400;
     color: vars.$color-primary;
@@ -372,14 +380,69 @@ body{
     margin-bottom: 30px;
     padding-left: 50px;
     position: relative;
+    max-width: 260px;
     &::before {
       position: absolute;
       left: 0;
+      top: 50%;
+      transform: translateY(-50%);
       content: '';
       width: 30px;
       height: 22px;
       background-image: url(../images/our-advantages-line-decor.svg);
+      background-repeat: no-repeat;
     }
   }
 }
 
+.our-blog {
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 279px 329px;
+    gap: 20px;
+    padding: 0 40px 100px 40px;
+    background-image: url(../images/our-blog-decor.svg);
+    background-repeat: no-repeat;
+    background-position: 60px bottom;
+  }
+  &__title {
+    font-size: 45px;
+    @extend %lora-400;
+    margin-bottom: 50px;
+  }
+  &__text {
+    font-size: 16px;
+    color: vars.$color-text-muted;
+    max-width: 403px;
+    margin-bottom: 50px;
+  }
+  &__btn-link {
+    display: inline-block;
+    font-size: 16px;
+    border: 1px solid vars.$color-text-muted;
+    color: vars.$color-text-muted;
+    padding: 10px 90px;
+  }
+  &__box-right {
+    grid-row: span 2;
+    align-self: center;
+  }
+  &__box-bottom {
+    grid-column: span 2;
+    margin-left: auto;
+  }
+  &__box-img {
+    margin-bottom: 20px;
+  }
+  &__link {
+    display: inline-block;
+    color: vars.$color-text-muted;
+    @extend %lora-400;
+    margin-bottom: 5px;
+  }
+  &__date {
+    color: vars.$color-primary;
+    @extend %opensans-300;
+    font-size: 16px;
+  }
+}
