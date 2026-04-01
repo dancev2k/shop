@@ -336,3 +336,50 @@ body{
     border: 1px solid vars.$color-text-muted;
   }
 }
+
+.our-advantages {
+  margin-bottom: 150px;
+  background-color: vars.$bg-primary;
+  &__wrapper {
+    display: flex;
+    position: relative;
+    padding: 64px 130px 34px 0;
+  }
+  &__img {
+    position: absolute;
+    left: 40px;
+    bottom: 0;
+  }
+  &__inner {
+    margin-left: auto;
+  }
+  &__decor {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  &__title {
+    font-size: 45px;
+    @extend %lora-400;
+    margin-bottom: 50px;
+  }
+  &__list {
+    column-count: 2;
+    column-gap: 80px;
+  }
+  &__item {
+    color: vars.$color-accent;
+    margin-bottom: 30px;
+    padding-left: 50px;
+    position: relative;
+    &::before {
+      position: absolute;
+      left: 0;
+      content: '';
+      width: 30px;
+      height: 22px;
+      background-image: url(../images/our-advantages-line-decor.svg);
+    }
+  }
+}
+
