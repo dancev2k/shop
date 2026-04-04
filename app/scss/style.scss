@@ -502,3 +502,118 @@ body{
     cursor: pointer;
   }
 }
+
+.collection-top {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.breadcrumbs {
+  padding: 50px 0 80px;
+  &__list {
+    display: flex;
+    gap: 16px;
+    font-size: 16px;
+    color: vars.$color-text-muted;
+  }
+  &__item {
+    position: relative;
+  }
+  &__item + .breadcrumbs__item::before {
+    content: '/';
+    position: absolute;
+    left: -10px;
+  }
+}
+
+.collection {
+  padding-bottom: 50px;
+  &__title {
+    font-size: 45px;
+    @extend %lora-400;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  &__inner {
+    display: grid;
+    grid-template-areas: "aa ab ba bb"
+                         "cc cc cd dc"
+                         "cc cc ee ef"
+                         "fe ff gg gg"
+                         "gh hg gg gg";
+    gap: 40px;
+  }
+  &__item {
+    position: relative;
+    &:nth-child(1){
+      grid-area: aa;
+    }
+    &:nth-child(2){
+      grid-area: ab;
+    }
+    &:nth-child(3){
+      grid-area: ba;
+    }
+    &:nth-child(4){
+      grid-area: bb;
+    }
+    &:nth-child(5){
+      grid-area: cc;
+      height: fit-content;
+    }
+    &:nth-child(6){
+      grid-area: cd;
+    }
+    &:nth-child(7){
+      grid-area: dc;
+    }
+    &:nth-child(8){
+      grid-area: ee;
+    }
+    &:nth-child(9){
+      grid-area: ef;
+    }
+    &:nth-child(10){
+      grid-area: fe;
+      margin-top: -130px;
+    }
+    &:nth-child(11){
+      grid-area: ff;
+      margin-top: -130px;
+    }
+    &:nth-child(12){
+      grid-area: gg;
+      height: fit-content;
+    }
+    &:nth-child(13){
+      grid-area: gh;
+    }
+    &:nth-child(14){
+      grid-area: hg;
+    }
+  }
+
+  &__item-btn {
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+  &__item-name {
+    @extend %lora-400;
+    color: #fff;
+    width: 100%;
+    padding: 12px 0;
+    background-color: vars.$color-accent;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+}
