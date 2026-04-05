@@ -510,8 +510,14 @@ body{
   background-position: center;
 }
 
+.collection-main {
+  .breadcrumbs {
+    padding-top: 50px;
+  }
+}
+
 .breadcrumbs {
-  padding: 50px 0 80px;
+  padding: 30px 0 80px;
   &__list {
     display: flex;
     gap: 16px;
@@ -529,7 +535,15 @@ body{
 }
 
 .collection {
-  padding-bottom: 50px;
+  &__container {
+    position: relative;
+  }
+  &__decor {
+    position: absolute;
+    top: -210px;
+    right: -30px;
+    z-index: 5;
+  }
   &__title {
     font-size: 45px;
     @extend %lora-400;
@@ -617,3 +631,42 @@ body{
     left: 0;
   }
 }
+
+.pagination {
+  padding: 50px 0 100px;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  &__arrow {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__arrow-disabled {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    gap: 2px;
+  }
+  &__link {
+    font-size: 16px;
+    color: vars.$color-primary;
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__link--active {
+    color: #fff;
+    background-color: vars.$color-text-muted;
+  }
+}
+
