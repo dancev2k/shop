@@ -876,3 +876,63 @@ body{
   }
 }
 
+.page-404 {
+  &__container {
+    max-width: 1560px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+  &__inner {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+  }
+  &__img {
+    margin-right: 20px;
+  }
+  &__content {  
+  }
+  &__content-title {
+    font-size: 160px;
+    @extend %lora-400;
+    margin: 240px 0 70px;
+  }
+  &__content-link {
+    font-size: 48px;
+    @extend %lora-400;
+    text-transform: uppercase;
+    max-width: 730px;
+    display: flex;
+    align-items: end;
+    img {
+      margin-left: auto;
+    }
+  }
+}
+
+.moving {
+  opacity: .2;
+  overflow: hidden;
+  &__text {
+    text-transform: uppercase;
+    font-size: 160px;
+    @extend %lora-400;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    white-space: nowrap;
+    animation-name: moving;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes moving {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
