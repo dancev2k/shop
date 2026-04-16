@@ -1166,4 +1166,114 @@ body{
   }
 }
 
-
+ .reviews {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  &__top-title {
+    @extend %lora-400;
+    font-size: 64px;
+  }
+  &__top-link {
+    font-size: 24px;
+    color: rgba($color: vars.$color-accent, $alpha: .4);
+    border-bottom: 1px solid vars.$color-accent;
+  }
+  &__slider {
+    overflow: hidden;
+    margin-bottom: 25px;
+    width: calc(100vw - (100vw - 1500px) / 2);
+  }
+  &__slider-nav {
+    position: absolute;
+    max-width: 1520px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+  &__pagination {
+    @extend %inter-400;
+    font-size: 18px;
+    position: absolute;
+    top: 24px;
+    right: 44px;
+    left: auto;
+    width: auto;
+    color: rgba($color: vars.$color-accent, $alpha: .3);
+    .swiper-pagination-current {
+      padding-right: 20px;
+      color: vars.$color-accent;
+    }
+    span + span {
+      padding-left: 20px;
+    }
+  }
+  &__button {
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+  }
+  &__button-prev {
+    right: 158px;
+  }
+  &__button-next {
+    right: 0;
+  }
+  &__box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  &__box-list {
+    display: flex;
+  }
+  &__box-item {
+    display: flex;
+    align-items: center;
+  }
+  &__box-link {
+    margin-left: 10px;
+    font-size: 16px;
+    color: rgba($color: vars.$color-accent, $alpha: .4);
+    border-bottom: 1px solid vars.$color-accent;
+  }
+  &__addreview {
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 16px;
+    padding: 24px 40px;
+    border: 1px solid;
+    margin-bottom: 40px;
+  }
+  &__item {
+    margin-top: 20px;
+    padding: 40px 50px;
+    border: 1px solid rgba($color: #000000, $alpha: .15)
+  }
+  &__item-date {
+    font-size: 14px;
+    opacity: .4;
+    margin-bottom: 15px;
+  }
+  &__item-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 24px;
+  }
+  &__item-text {
+    max-width: 1220px;
+  }
+  &__item-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+    max-width: 1220px;
+  }
+}
